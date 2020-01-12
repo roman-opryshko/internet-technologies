@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- Подключение шрифта Font Awesome-->
+    <title> Лабораторная 2 </title>
+    <style>
+      img:hover{ 
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+        transition-delay: .1s;
+        transition-duration: .5s;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="form-wrap">
+      <div class="profile"><img src="student.png" alt="студент" style="border-radius: 50%; width: 112px; image-rendering: pixelated;">
+        <h1>Регистрация</h1>
+      </div>
+    <form method="POST" action="">
+      <div>
+        <label for="name">Имя</label>
+        <input type="text" name="name" required pattern="^[А-Яа-яЁё]+$">
+      </div>
+      <div class="radio">
+        <span>Пол</span>
+        <label>
+          <input type="radio" name="sex" value="мужской">мужской
+          <div class="radio-control male"></div>
+        </label>
+        <label>
+          <input type="radio" name="sex" value="женский">женский
+          <div class="radio-control female"></div>
+        </label>
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label for="group">Группа</label>
+        <select name="group">
+          <option>Выберите вашу группу</option>
+          <option value="КИ-17-1">КИ-17-1</option>
+          <option value="КИ-17-2">КИ-17-2</option>
+          <option value="КИ-17-3">КИ-17-3</option>
+          <option value="КИ-17-4">КИ-17-4</option>
+          <option value="КИ-17-5">КИ-17-5</option>
+        </select>
+        <div class="select-arrow"></div>
+      </div>
+      <button type="submit">Отправить</button>
+    </form> 
+   </div>
+  </body>
+</html>
